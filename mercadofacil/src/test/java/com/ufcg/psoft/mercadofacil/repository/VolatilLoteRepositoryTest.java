@@ -27,7 +27,7 @@ class VolatilLoteRepositoryTest {
                 .nome("Produto Base")
                 .codigoBarra("123456789")
                 .fabricante("Fabricante Base")
-                .preço(125.36)
+                .preco(125.36)
                 .build();
         lote = Lote.builder()
                 .id(1L)
