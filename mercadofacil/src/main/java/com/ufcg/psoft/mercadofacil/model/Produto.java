@@ -8,7 +8,7 @@ import lombok.Data;
 public class Produto {
     private Long id;
     private String nome;
-    private double preço;
+    private double preco;
     private String codigoBarra;
     private String fabricante;
 }
