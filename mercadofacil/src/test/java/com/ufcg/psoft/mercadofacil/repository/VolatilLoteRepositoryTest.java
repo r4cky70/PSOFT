@@ -48,7 +48,7 @@ class VolatilLoteRepositoryTest {
         resultado = driver.save(lote);
 
         assertEquals(driver.findAll().size(), 1);
-        assertEquals(resultado.getId().longValue(), Lote.getId().longValue());
+        assertEquals(resultado.getId().longValue(), lote.getId().longValue());
         assertEquals(resultado.getProduto(), produto);
     }
 
