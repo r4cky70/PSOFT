@@ -44,6 +44,9 @@ class VolatilLoteRepositoryTest {
 
     @Test
     @DisplayName("Adicionar o primeiro Lote no repositorio de dados")
+    /*
+    A adição do primeiro lote funciona corretamente
+    */
     void salvarPrimeiroLote(){
         resultado = driver.save(lote);
 
@@ -54,6 +57,11 @@ class VolatilLoteRepositoryTest {
 
     @Test
     @DisplayName("Adicionar o segundo Lote (ou posterior) no repositorio de dados")
+    /*
+    Teste falhou!
+    O erro se encontra no método Lote.save, a implementação retorna sempre o primeiro Lote do container
+    mas deveria retornar o Lote que acabou de ser inserido
+    */
     void salvarSegundoLoteOuPosterior() {
         Produto produtoExtra = Produto.builder()
                 .id(2L)
@@ -76,4 +84,6 @@ class VolatilLoteRepositoryTest {
         assertEquals(resultado.getId().longValue(), loteExtra.getId().longValue());
         assertEquals(resultado.getProduto(), produtoExtra);
     }
+
+
 }
