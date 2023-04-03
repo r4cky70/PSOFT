@@ -1,8 +1,11 @@
 package com.ufcg.psoft.mercadofacil.repository;
 
-import java.util.List;
+import com.ufcg.psoft.mercadofacil.model.Produto;
+import org.springframework.stereotype.Repository;
 
-public interface ProdutoRepository<T, ID> {
+import java.util.List;
+@Repository
+public interface ProdutoRepository extends JpaRepository<Produto, Long> {
     T save(T produto);
     T find(ID id);
     List<T> findAll();
