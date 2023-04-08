@@ -5,24 +5,16 @@ import lombok.Builder;
 import lombok.Data;
 
 @Data
-@Entity
-@Table
+@Builder
 public class Produto {
-    @JsonProperty("id")t
-    @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @JsonProperty("id")
     private Long id;
     @JsonProperty("nome")
-    @Column(nullable = false)
     private String nome;
     @JsonProperty("preco")
-    @Column(nullable = false)
     private double preco;
     @JsonProperty("codigoBarra")
-    @Column(nullable = false)
     private String codigoBarra;
     @JsonProperty("fabricante")
-    @Column(nullable = false)
     private String fabricante;
 }
-
